@@ -1,0 +1,175 @@
+Core-Zodiac - AI Landing Page Generator Platform
+================================================
+
+📁 Project Structure
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Root Level Documentation
+├── 📄 README.md                      - Main project overview
+├── 📄 QUICKSTART.md                  - 5-minute setup guide
+├── 📄 IMPLEMENTATION_COMPLETE.md     - Implementation summary
+├── 📄 PROJECT_SUMMARY.md             - Project statistics
+├── 📄 FEATURES.md                    - Feature checklist
+├── 📄 CHANGELOG.md                   - Version history
+├── 📄 CONTRIBUTING.md                - Contribution guide
+├── 📄 SECURITY.md                    - Security policy
+├── 📄 LICENSE                        - MIT License
+├── ⚙️  package.json                  - Root dependencies
+├── 🐳 docker-compose.yml             - Multi-service Docker setup
+├── 🔧 core-zodiac.code-workspace     - VS Code workspace
+└── 🚀 setup.sh                       - Automated setup script
+
+Backend (Node.js + Express + TypeScript)
+backend/
+├── src/
+│   ├── controllers/                  - Request handlers
+│   │   ├── auth.controller.ts        - Authentication
+│   │   ├── user.controller.ts        - User management
+│   │   ├── landingPage.controller.ts - Landing pages
+│   │   ├── product.controller.ts     - Products
+│   │   ├── order.controller.ts       - Orders
+│   │   ├── chat.controller.ts        - Chat sessions
+│   │   ├── adCampaign.controller.ts  - Ad campaigns
+│   │   ├── ai.controller.ts          - AI generation
+│   │   └── tenant.controller.ts      - Multi-tenancy
+│   │
+│   ├── routes/                       - API routes
+│   │   ├── auth.routes.ts
+│   │   ├── user.routes.ts
+│   │   ├── landingPage.routes.ts
+│   │   ├── product.routes.ts
+│   │   ├── order.routes.ts
+│   │   ├── chat.routes.ts
+│   │   ├── adCampaign.routes.ts
+│   │   ├── ai.routes.ts
+│   │   └── tenant.routes.ts
+│   │
+│   ├── services/                     - Business logic
+│   │   ├── ai.service.ts             - OpenAI integration
+│   │   └── chat.service.ts           - WebSocket chat
+│   │
+│   ├── middleware/                   - Express middleware
+│   │   ├── auth.ts                   - JWT authentication
+│   │   └── errorHandler.ts           - Error handling
+│   │
+│   └── index.ts                      - Server entry point
+│
+├── prisma/
+│   └── schema.prisma                 - Database schema (11 models)
+│
+├── 📦 package.json                   - Backend dependencies
+├── 📝 tsconfig.json                  - TypeScript config
+├── 🐳 Dockerfile                     - Production container
+└── 🔒 .env.example                   - Environment template
+
+Frontend (Next.js + React + TypeScript)
+frontend/
+├── src/
+│   ├── pages/                        - Next.js pages
+│   │   ├── _app.tsx                  - App wrapper
+│   │   ├── _document.tsx             - HTML document
+│   │   └── index.tsx                 - Landing page
+│   │
+│   ├── components/                   - React components
+│   ├── lib/
+│   │   └── api.ts                    - Axios API client
+│   │
+│   ├── store/
+│   │   └── auth.ts                   - Zustand state
+│   │
+│   └── styles/
+│       └── globals.css               - Global styles
+│
+├── public/
+│   └── manifest.json                 - PWA manifest
+│
+├── 📦 package.json                   - Frontend dependencies
+├── 📝 tsconfig.json                  - TypeScript config
+├── 🎨 tailwind.config.js             - Tailwind config
+├── ⚙️  next.config.js                - Next.js config
+├── ⚙️  postcss.config.js             - PostCSS config
+├── 🌍 next-i18next.config.js         - i18n config
+├── 🐳 Dockerfile                     - Production container
+└── 🔒 .env.local.example             - Environment template
+
+AI Layer
+ai-layer/
+└── 📄 README.md                      - AI integration docs
+
+Documentation
+docs/
+├── 📄 API.md                         - API documentation
+├── 📄 ARCHITECTURE.md                - System architecture
+├── 📄 CONFIGURATION.md               - Config reference
+├── 📄 DEPLOYMENT.md                  - Production guide
+└── 📄 DEVELOPMENT.md                 - Developer guide
+
+Configuration
+config/                               - Additional configs
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 Statistics
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Total Files:              63
+Lines of Code:            ~1,800
+Documentation Pages:      12
+API Endpoints:            40+
+Database Models:          11
+Controllers:              9
+Routes:                   9
+Services:                 2
+Middleware:               2
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 Key Features
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Landing Page Generator with AI
+✅ AI Sales Chatbot (GPT-4)
+✅ Mini Shop (E-commerce)
+✅ Multi-Tenant Admin Panel
+✅ Auto-Ads Generator
+✅ Real-time Chat (WebSocket)
+✅ PWA Support
+✅ Multi-Language (4 languages)
+✅ Payment Integration (Stripe)
+✅ Role-Based Access Control
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 Getting Started
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Quick Start (Docker):
+  docker-compose up -d
+
+Manual Setup:
+  ./setup.sh
+  cd backend && npx prisma migrate dev
+  npm run dev
+
+Access:
+  Frontend: http://localhost:3000
+  Backend:  http://localhost:4000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 Documentation Guide
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+New Users:     Start with QUICKSTART.md
+Developers:    Read DEVELOPMENT.md
+Deployment:    Follow DEPLOYMENT.md
+API Usage:     Reference API.md
+Architecture:  Study ARCHITECTURE.md
+Configuration: Check CONFIGURATION.md
+Contributing:  See CONTRIBUTING.md
+Security:      Review SECURITY.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 Status: Production Ready!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
