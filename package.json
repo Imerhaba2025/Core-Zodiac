@@ -1,0 +1,10 @@
+{
+  "name": "core-zodiac-whatsapp-widget",
+  "version": "1.0.0",
+  "description": "A lightweight static WhatsApp contact widget demo.",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m http.server 4173",
+    "check": "python3 - <<'PY'\nfrom pathlib import Path\nfor path in ['index.html', 'src/styles.css', 'src/main.js']:\n    data = Path(path).read_text()\n    assert data.strip(), f'{path} is empty'\nprint('Static widget files are present.')\nPY"
+  }
+}
