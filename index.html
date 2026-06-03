@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A polished WhatsApp support widget that helps visitors start a chat quickly."
+    />
+    <title>Core Zodiac WhatsApp Widget</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">Core Zodiac</p>
+        <h1 id="hero-title">Help customers reach you in one tap.</h1>
+        <p class="hero-copy">
+          This demo page includes a responsive WhatsApp widget with quick replies,
+          an availability card, and an accessible floating launcher.
+        </p>
+        <a class="hero-cta" href="#whatsapp-widget">Try the widget</a>
+      </section>
+    </main>
+
+    <aside class="whatsapp-widget" id="whatsapp-widget" aria-live="polite">
+      <section class="chat-card" id="chat-card" aria-labelledby="chat-card-title">
+        <header class="chat-header">
+          <div class="agent-avatar" aria-hidden="true">CZ</div>
+          <div>
+            <h2 id="chat-card-title">Chat with Core Zodiac</h2>
+            <p>Typically replies in a few minutes</p>
+          </div>
+          <button class="icon-button" id="close-chat" type="button" aria-label="Close WhatsApp widget">
+            &times;
+          </button>
+        </header>
+
+        <div class="chat-body">
+          <div class="message inbound">
+            Hi! 👋 Tell us what you need and we’ll continue the conversation on WhatsApp.
+          </div>
+          <div class="quick-replies" aria-label="Suggested WhatsApp messages">
+            <button type="button" data-message="Hello Core Zodiac, I need help choosing a service.">
+              I need help choosing a service
+            </button>
+            <button type="button" data-message="Hello Core Zodiac, I would like to book a consultation.">
+              Book a consultation
+            </button>
+            <button type="button" data-message="Hello Core Zodiac, can you share pricing details?">
+              Share pricing details
+            </button>
+          </div>
+          <label class="message-label" for="custom-message">Your message</label>
+          <textarea
+            id="custom-message"
+            rows="3"
+            placeholder="Write your message..."
+          >Hello Core Zodiac, I would like to learn more.</textarea>
+          <a class="whatsapp-link" id="whatsapp-link" href="https://wa.me/15551234567?text=Hello%20Core%20Zodiac%2C%20I%20would%20like%20to%20learn%20more." target="_blank" rel="noopener noreferrer">
+            Continue on WhatsApp
+          </a>
+        </div>
+      </section>
+
+      <button class="launcher" id="open-chat" type="button" aria-expanded="true" aria-controls="chat-card">
+        <span class="launcher-icon" aria-hidden="true">☎</span>
+        <span>WhatsApp us</span>
+      </button>
+    </aside>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
