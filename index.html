@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MarketMotion AI turns URLs, prompts, and blank storyboards into high-quality marketing video plans with voiceover, captions, and campaign-ready exports."
+    />
+    <title>MarketMotion AI Video Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="MarketMotion home">
+          <span class="brand-mark">▶</span>
+          <span>MarketMotion</span>
+        </a>
+        <nav class="nav-links" aria-label="Site sections">
+          <a href="#generator">Generator</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#features">Features</a>
+          <a href="#exports">Exports</a>
+        </nav>
+        <a class="header-cta" href="#generator">Create video</a>
+      </header>
+
+      <main id="top">
+        <section class="hero-section">
+          <div class="hero-copy">
+            <p class="eyebrow">AI video generator for marketing teams</p>
+            <h1>Create launch-ready marketing videos from a URL, prompt, or blank canvas.</h1>
+            <p class="hero-lede">
+              Build high-quality product explainers, social ads, SEO clips, and campaign series with
+              AI scripts, realistic voiceover direction, captions, scene-by-scene storyboards, and
+              export presets for every channel.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-button" href="#generator">Start building</a>
+              <a class="secondary-button" href="#features">Explore tools</a>
+            </div>
+            <dl class="hero-stats" aria-label="Generator highlights">
+              <div>
+                <dt>4K</dt>
+                <dd>quality brief</dd>
+              </div>
+              <div>
+                <dt>50+</dt>
+                <dd>languages</dd>
+              </div>
+              <div>
+                <dt>3</dt>
+                <dd>aspect ratios</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="hero-card" aria-label="Video preview mockup">
+            <div class="preview-toolbar">
+              <span></span><span></span><span></span>
+              <strong>Campaign preview</strong>
+            </div>
+            <div class="video-preview">
+              <div class="play-orb">▶</div>
+              <div class="caption-card">
+                <span>Scene 03</span>
+                <strong>Turn attention into action with a bold product reveal.</strong>
+              </div>
+            </div>
+            <div class="timeline" aria-hidden="true">
+              <span style="width: 18%"></span>
+              <span style="width: 28%"></span>
+              <span style="width: 22%"></span>
+              <span style="width: 32%"></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="generator-section" id="generator" aria-labelledby="generator-title">
+          <div class="section-heading">
+            <p class="eyebrow">AI studio</p>
+            <h2 id="generator-title">Generate a marketing video blueprint</h2>
+            <p>
+              Choose URL-to-video, prompt-to-video, or blank-build mode. The studio creates a
+              campaign script, scene plan, voiceover brief, caption strategy, and export checklist.
+            </p>
+          </div>
+
+          <div class="generator-grid">
+            <form class="generator-panel" id="videoForm">
+              <fieldset class="mode-toggle" aria-label="Generation mode">
+                <label>
+                  <input type="radio" name="mode" value="url" checked />
+                  <span>URL to video</span>
+                </label>
+                <label>
+                  <input type="radio" name="mode" value="prompt" />
+                  <span>AI prompt</span>
+                </label>
+                <label>
+                  <input type="radio" name="mode" value="blank" />
+                  <span>Blank build</span>
+                </label>
+              </fieldset>
+
+              <label class="field-group" id="sourceGroup">
+                <span>Source URL or feed URL</span>
+                <input
+                  id="sourceInput"
+                  type="url"
+                  placeholder="https://example.com/product-launch"
+                  value="https://example.com/summer-campaign"
+                />
+              </label>
+
+              <label class="field-group">
+                <span>Prompt or campaign goal</span>
+                <textarea id="promptInput" rows="5" placeholder="Promote a new product to busy founders..."></textarea>
+              </label>
+
+              <div class="control-grid">
+                <label class="field-group">
+                  <span>Video type</span>
+                  <select id="videoType">
+                    <option>Product launch</option>
+                    <option>Social ad</option>
+                    <option>SEO explainer</option>
+                    <option>Testimonial story</option>
+                    <option>Educational short</option>
+                  </select>
+                </label>
+                <label class="field-group">
+                  <span>Tone</span>
+                  <select id="toneInput">
+                    <option>Confident</option>
+                    <option>Friendly</option>
+                    <option>Luxury</option>
+                    <option>Urgent</option>
+                    <option>Playful</option>
+                  </select>
+                </label>
+                <label class="field-group">
+                  <span>Voiceover</span>
+                  <select id="voiceInput">
+                    <option>Warm narrator</option>
+                    <option>Energetic creator</option>
+                    <option>Premium brand voice</option>
+                    <option>Calm explainer</option>
+                  </select>
+                </label>
+                <label class="field-group">
+                  <span>Quality</span>
+                  <select id="qualityInput">
+                    <option>4K cinematic</option>
+                    <option>Full HD social</option>
+                    <option>Fast draft</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="checkbox-row" aria-label="Included tools">
+                <label><input type="checkbox" checked /> Auto captions</label>
+                <label><input type="checkbox" checked /> Stock media cues</label>
+                <label><input type="checkbox" checked /> Social exports</label>
+                <label><input type="checkbox" checked /> SEO metadata</label>
+              </div>
+
+              <button class="primary-button full-width" type="submit">Generate video plan</button>
+            </form>
+
+            <aside class="output-panel" aria-live="polite">
+              <div class="output-header">
+                <div>
+                  <p class="eyebrow">Generated output</p>
+                  <h3 id="outputTitle">Summer Campaign Launch</h3>
+                </div>
+                <span class="quality-pill" id="qualityPill">4K cinematic</span>
+              </div>
+              <div class="script-card">
+                <span>Voiceover script</span>
+                <p id="scriptOutput">
+                  Meet the campaign that turns seasonal curiosity into confident purchases. In
+                  seconds, your audience sees the problem, the product promise, and the next step.
+                </p>
+              </div>
+              <ol class="scene-list" id="sceneList"></ol>
+              <div class="export-strip" id="exportStrip"></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="workflow-section" id="workflow" aria-labelledby="workflow-title">
+          <div class="section-heading compact">
+            <p class="eyebrow">Built for speed</p>
+            <h2 id="workflow-title">From content input to publish-ready campaign</h2>
+          </div>
+          <div class="workflow-grid">
+            <article>
+              <span>01</span>
+              <h3>Ingest</h3>
+              <p>Paste a page URL, product feed, campaign prompt, or start from a blank storyboard.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Generate</h3>
+              <p>AI drafts a hook, voiceover, media direction, captions, and conversion-focused CTA.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Optimize</h3>
+              <p>Adapt pacing, tone, aspect ratio, language, SEO metadata, and channel-specific cuts.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Publish</h3>
+              <p>Export MP4, thumbnail, SRT captions, campaign notes, and social-ready variants.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="features-section" id="features" aria-labelledby="features-title">
+          <div class="section-heading compact">
+            <p class="eyebrow">Marketing automation tools</p>
+            <h2 id="features-title">Everything needed to scale video campaigns</h2>
+          </div>
+          <div class="feature-grid">
+            <article>
+              <h3>URL to video</h3>
+              <p>Repurpose blogs, landing pages, ecommerce pages, or feed URLs into video briefs.</p>
+            </article>
+            <article>
+              <h3>Prompt to video</h3>
+              <p>Describe a campaign idea and receive a structured story, scenes, and narration.</p>
+            </article>
+            <article>
+              <h3>Realistic voiceover</h3>
+              <p>Set narrator style, pace, emotion, pronunciation notes, and multilingual direction.</p>
+            </article>
+            <article>
+              <h3>Captions and subtitles</h3>
+              <p>Create accessibility-first captions, SRT export notes, and scroll-stopping overlays.</p>
+            </article>
+            <article>
+              <h3>Brand kit controls</h3>
+              <p>Keep videos consistent with reusable colors, tone, CTA style, and visual guidance.</p>
+            </article>
+            <article>
+              <h3>Campaign calendar</h3>
+              <p>Plan series ideas, publish windows, and channel-specific variants for social growth.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="exports-section" id="exports" aria-labelledby="exports-title">
+          <div>
+            <p class="eyebrow">Best-quality delivery</p>
+            <h2 id="exports-title">Export packs for every marketing channel</h2>
+            <p>
+              Generate horizontal, square, and vertical deliverables with matching thumbnails,
+              captions, metadata, and platform notes for websites, YouTube, LinkedIn, TikTok, and ads.
+            </p>
+          </div>
+          <div class="export-cards">
+            <span>16:9 Website</span>
+            <span>1:1 Feed</span>
+            <span>9:16 Reels</span>
+            <span>SRT captions</span>
+            <span>Thumbnail</span>
+            <span>SEO copy</span>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
